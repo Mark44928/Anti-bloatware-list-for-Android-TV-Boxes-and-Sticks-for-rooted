@@ -30,4 +30,4 @@ Deleting these will break your system or cause a bootloop:
 * `com.android.vending` (Play Store)
 * `com.google.android.packageinstaller` (System App Installer)
 ---
-*Maintained by Mark44298 - Keeping sticks smooth af.*
+*Maintained by Mark44928 - Keeping sticks smooth af.*
