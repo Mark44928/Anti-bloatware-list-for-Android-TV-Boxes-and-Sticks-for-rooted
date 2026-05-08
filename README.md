@@ -29,5 +29,10 @@ Deleting these will break your system or cause a bootloop:
 * `com.google.android.gms` (Google Play Services)
 * `com.android.vending` (Play Store)
 * `com.google.android.packageinstaller` (System App Installer)
+
+# THE COMMAND FOR DEBLOATING (Only remotes without Microphone.)
+'''
+pm uninstall --user 0 com.google.android.katniss; pm uninstall --user 0 com.google.android.apps.googleassistant; pm uninstall --user 0 com.google.android.tts; pm uninstall --user 0 com.google.android.voicesearch.tv; pm uninstall --user 0 com.google.android.tv.remote.service; pm uninstall --user 0 com.google.android.videos; pm uninstall --user 0 com.google.android.music; pm uninstall --user 0 com.google.android.play.games; pm uninstall --user 0 com.android.printspooler; pm uninstall --user 0 com.google.android.marvin.talkback; pm uninstall --user 0 com.android.dreams.basic; pm uninstall --user 0 com.android.providers.downloads.ui; pm uninstall --user 0 com.google.android.feedback; pm uninstall --user 0 com.google.android.syncadapters.contacts
+'''
 ---
 *Maintained by Mark44928 - Keeping sticks smooth af.*
