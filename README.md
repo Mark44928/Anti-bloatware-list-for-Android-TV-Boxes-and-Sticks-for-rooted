@@ -1,6 +1,6 @@
 # Android TV System Bloatware List 🪦
 A guide to the pre-installed apps you can safely nuke on Android TV sticks to reclaim your 1.90GB+ free space.
-> **Note:** This list is for **Rooted** users. Removing these apps will stop background updates and free up RAM/Storage. Pre-android 10 recommend, Android 10 and above okay but there's limitations unless we're rooted
+> **Note:** This list is for **Rooted** users. Removing these apps will stop background updates and free up RAM/Storage. Pre-android 10 recommend, Android 10 and above okay but there's limitations unless you're rooted
 ## 🎤 The "No-Mic" Graveyard
 > **⚠️ WARNING:** If your remote **DOES NOT** have a Microphone button, delete these apps immediately. They are completely useless and consume background resources.
 
