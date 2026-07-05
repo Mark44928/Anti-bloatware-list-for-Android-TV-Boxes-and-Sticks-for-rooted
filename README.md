@@ -170,6 +170,27 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
+---
+
+## You Might Also Like
+
+- [NoNameOS](https://github.com/Mark44928/NoNameOS) - Pure C++ hobbyist OS simulation
+- [Termux TUI Package Store](https://github.com/Mark44928/Termux-TUI-Package-Store) - Interactive fzf-powered package browser for Termux
+
+---
+
+## Star History
+
+<a href="https://star-history.com/#Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted&type=Date" />
+ </picture>
+</a>
+
+---
+
 <p align="center">
   <i>Keep your sticks clean and fast.</i>
 </p>
