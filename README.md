@@ -179,18 +179,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-## Star History
-
-<a href="https://star-history.com/#Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted&type=Date" />
- </picture>
-</a>
-
----
-
 <p align="center">
   <i>Keep your sticks clean and fast.</i>
 </p>
