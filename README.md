@@ -221,7 +221,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## You Might Also Like
 
 - [NoNameOS](https://github.com/Mark44928/NoNameOS) - Pure C++ hobbyist OS simulation
-- [Termux TUI Package Store](https://github.com/Mark44928/Termux-TUI-Package-Store) - Interactive fzf-powered package browser for Termux
 
 ---
 
