@@ -6,8 +6,6 @@
   <a href="https://github.com/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted?color=blue" alt="License"/></a>
   <img src="https://img.shields.io/badge/requires-root-red" alt="Root Required"/>
   <img src="https://img.shields.io/badge/Android-9%20%7C%2010%2B-green" alt="Android Version"/>
-  <img src="https://img.shields.io/badge/optimized-for-TV-green" alt="TV Optimized"/>
-  <img src="https://img.shields.io/badge/no-mic-remote-supported-brightgreen" alt="No-Mic Supported"/>
 </p>
 
 <p align="center">
