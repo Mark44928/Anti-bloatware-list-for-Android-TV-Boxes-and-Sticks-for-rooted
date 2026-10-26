@@ -14,7 +14,9 @@
 
 ---
 
-> **What is this?** A curated, community-tested list of pre-installed bloatware on Android TV sticks and boxes that you can **safely remove** to free up storage, reduce background processes, reclaim RAM, and improve overall device performance. Includes two ready-to-run ADB scripts: one for remotes with microphones and one for no-mic setups.
+> **What is this?** A curated, community-tested list of pre-installed bloatware on Android TV sticks and boxes that you can **safely remove** to free up storage, reduce background processes, reclaim RAM, and improve overall device performance. Includes two ready-to-run command blocks: one for remotes with microphones and one for no-mic setups.
+
+> **Read this first:** `pm uninstall --user 0 <package>` removes the app for the current user only. It is usually reversible with `cmd package install-existing <package>`, but it can still break features you rely on. Back up your device, remove one package at a time when testing, and never touch the [DO NOT TOUCH](#-do-not-touch) list.
 
 ---
 
@@ -26,9 +28,9 @@ Android TV devices ship with dozens of pre-installed apps you'll never use. Remo
 |:---|---:|
 | **Storage Freed** | 1.90 GB+ |
 | **RAM Saved** | ~200 MB+ |
-| **Boot Time** | 5-15% faster |
+| **Boot Time** | Up to 5–15% faster |
 | **Background Processes** | Reduced by ~30% |
-| **Battery Consumption** | Lower on stick devices |
+| **Idle CPU / battery** | Less background work on stick devices |
 
 Removing bloatware also reduces telemetry, limits ad tracking, and minimizes unnecessary API calls — all without breaking your system if you follow this guide.
 
@@ -83,6 +85,16 @@ Removing bloatware also reduces telemetry, limits ad tracking, and minimizes unn
 1. **Back up your data** -- Removing system apps is reversible, but it's good practice.
 2. **Know your remote** -- If your remote has a **microphone button**, skip the "No-Mic" section.
 3. **Never remove Google Play Services** (`com.google.android.gms`) or the Play Store (`com.android.vending`) -- this will break your system.
+
+### Safety checklist
+
+- **Verify the package exists first:** `pm list packages | grep <name>`
+- **Check what it is:** `pm path <package>`
+- **Remove one package at a time while testing**, not the whole block at once.
+- **Use `--user 0`:** `pm uninstall --user 0 <package>` is per-user and usually reversible.
+- **Restore it:** `cmd package install-existing <package>`
+- **Never use `pm uninstall` without `--user 0`** unless you have a full system backup and know exactly what you are doing.
+- **Root is recommended.** Some packages can be removed with plain ADB using `--user 0`; protected system packages may still require root.
 
 ---
 
@@ -182,6 +194,25 @@ Example:
 cmd package install-existing com.google.android.music
 ```
 
+Restore the universal packages shown above (run the block that matches what you removed):
+
+```bash
+for p in \
+  com.google.android.katniss \
+  com.google.android.apps.googleassistant \
+  com.google.android.tts \
+  com.google.android.voicesearch.tv \
+  com.google.android.tv.remote.service \
+  com.google.android.videos \
+  com.google.android.music \
+  com.google.android.play.games \
+  com.android.printspooler \
+  com.google.android.marvin.talkback \
+  com.android.dreams.basic; do
+  cmd package install-existing "$p" 2>/dev/null || true
+done
+```
+
 > **Note:** If `cmd package install-existing` fails on older devices, use:  
 > `adb shell pm install-create -r -t -i com.android.packageinstaller.id` and reinstall from APK.
 
@@ -196,7 +227,7 @@ This list has been tested on common Android TV sticks and boxes running Android 
 | Generic MXQ / X96 boxes | 9.0 | Fully compatible |
 | Xiaomi Mi Box S | 9.0 / 10.0 | Some Google apps may reappear after updates |
 | Chromecast with Google TV | 10.0+ | Limited -- some packages are protected |
-| Onn Roku TV (Android TV) | 10.0 | Fully compatible |
+| Onn. Android TV Box | 10.0 | Fully compatible |
 
 > Have a device not listed? [Open an issue](https://github.com/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted/issues) and let us know!
 
@@ -221,6 +252,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## You Might Also Like
 
 - [NoNameOS](https://github.com/Mark44928/NoNameOS) - Pure C++ hobbyist OS simulation
+- [SnakTUI](https://github.com/Mark44928/SnakTUI) - Neon terminal Snake game built with Python + Textual
+- [Grub Blasters](https://github.com/Mark44928/GrubBlastersHTML) - Single-file Worms-style artillery game
+- [CalculaHTML](https://github.com/Mark44928/CalculaHTML) - Modern calculator PWA with 14 themes
 
 ---
 
