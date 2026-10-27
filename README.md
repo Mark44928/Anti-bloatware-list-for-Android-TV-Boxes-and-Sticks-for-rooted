@@ -235,7 +235,7 @@ This list has been tested on common Android TV sticks and boxes running Android 
 
 ## Contributing
 
-Contributions are welcome! If you've found new bloatware packages or tested on a new device:
+Contributions are welcome! If you've found new bloatware packages or tested on a new device (see [CONTRIBUTING.md](CONTRIBUTING.md); all contributors follow the [Code of Conduct](CODE_OF_CONDUCT.md)):
 
 1. Fork the repository
 2. Add your findings to the appropriate table
