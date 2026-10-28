@@ -111,6 +111,16 @@ These apps are safe to remove on **any** Android TV device, regardless of your r
 | Print Spooler | `com.android.printspooler` | TVs do not need printing capabilities. |
 | Talkback | `com.google.android.marvin.talkback` | Accessibility service (unless visually impaired). |
 | Basic Daydreams | `com.android.dreams.basic` | Default screensaver. Safe to remove if using a custom one. |
+| **Legacy Photo Viewer** | `com.android.gallery3d` | Old gallery app; replaced by Google Photos. |
+| **Feedback Consent** | `com.android.tv.feedbackconsent` | Telemetry opt-in prompt. Safe to remove. |
+| **On-Device Personalization** | `com.google.android.ondevicepersonalization.services` | ML personalization service; not needed on TV. |
+| **Federated Compute** | `com.google.android.federatedcompute.services` | Cross-device ML; unnecessary on TV. |
+| **Ambient Backdrop** | `com.google.android.backdrop` | Ambient mode screensaver; uses storage/bandwidth. |
+| **Ambient DreamX** | `com.google.android.apps.tv.dreamx` | Screensaver framework; safe if not using Ambient mode. |
+| **Privacy Sandbox Ads API** | `com.google.android.adservices.api` | Ad targeting framework; TV apps don't use it. |
+| **Partner Setup** | `com.google.android.partnersetup` | OEM attribution pings; safe to remove. |
+| **One-Time Initializer** | `com.google.android.onetimeinitializer` | Runs once at setup; no ongoing function. |
+| **Calendar Sync Adapter** | `com.google.android.syncadapters.calendar` | No calendar app on TV; safe to remove. |
 
 ---
 
@@ -156,7 +166,17 @@ pm uninstall --user 0 com.google.android.music; \
 pm uninstall --user 0 com.google.android.play.games; \
 pm uninstall --user 0 com.android.printspooler; \
 pm uninstall --user 0 com.google.android.marvin.talkback; \
-pm uninstall --user 0 com.android.dreams.basic
+pm uninstall --user 0 com.android.dreams.basic; \
+pm uninstall --user 0 com.android.gallery3d; \
+pm uninstall --user 0 com.android.tv.feedbackconsent; \
+pm uninstall --user 0 com.google.android.ondevicepersonalization.services; \
+pm uninstall --user 0 com.google.android.federatedcompute.services; \
+pm uninstall --user 0 com.google.android.backdrop; \
+pm uninstall --user 0 com.google.android.apps.tv.dreamx; \
+pm uninstall --user 0 com.google.android.adservices.api; \
+pm uninstall --user 0 com.google.android.partnersetup; \
+pm uninstall --user 0 com.google.android.onetimeinitializer; \
+pm uninstall --user 0 com.google.android.syncadapters.calendar
 ```
 
 > **Pro tip:** Save this block as `debloat.sh` and run it from your PC:  
@@ -173,6 +193,18 @@ pm uninstall --user 0 com.google.android.music; \
 pm uninstall --user 0 com.google.android.play.games; \
 pm uninstall --user 0 com.android.printspooler; \
 pm uninstall --user 0 com.google.android.marvin.talkback; \
+pm uninstall --user 0 com.android.dreams.basic; \
+pm uninstall --user 0 com.android.gallery3d; \
+pm uninstall --user 0 com.android.tv.feedbackconsent; \
+pm uninstall --user 0 com.google.android.ondevicepersonalization.services; \
+pm uninstall --user 0 com.google.android.federatedcompute.services; \
+pm uninstall --user 0 com.google.android.backdrop; \
+pm uninstall --user 0 com.google.android.apps.tv.dreamx; \
+pm uninstall --user 0 com.google.android.adservices.api; \
+pm uninstall --user 0 com.google.android.partnersetup; \
+pm uninstall --user 0 com.google.android.onetimeinitializer; \
+pm uninstall --user 0 com.google.android.syncadapters.calendar
+```
 pm uninstall --user 0 com.android.dreams.basic
 ```
 
@@ -230,6 +262,62 @@ This list has been tested on common Android TV sticks and boxes running Android 
 | Onn. Android TV Box | 10.0 | Fully compatible |
 
 > Have a device not listed? [Open an issue](https://github.com/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted/issues) and let us know!
+
+---
+
+### Vendor-Specific Bloatware (Safe to Remove)
+
+These packages are pre-installed by specific manufacturers and are generally safe to remove. **Always test one at a time.**
+
+| Vendor | Package Name | Description |
+|:---|:---|:---|
+| **Xiaomi / Mi** | `com.mitv.tvhome.atv` | PatchWall launcher rows |
+| | `com.mitv.tvhome.michannel` | Mi content rows |
+| | `com.mitv.tvhome.mitvplus` | Mi TV+ ad-funded channels |
+| | `com.mitv.tvhome.oemtab` | Xiaomi ad row on home |
+| | `com.miui.tv.analytics` | Mi analytics telemetry |
+| **TCL** | `com.tcl.channelplus` | TCL Live FAST channels |
+| | `com.tcl.dashboard` | TCL Home panel & promos |
+| | `com.tcl.esticker` | Store demo stickers |
+| | `com.tcl.exhibit` | Store demo mode |
+| | `com.tcl.gamebar` | Game mode overlay |
+| | `com.tcl.guard` | TGuard: tracking & memory cleaner |
+| | `com.tcl.hearaid` | Hearing test / volume adaptation |
+| | `com.tcl.hotelmenu` | Hotel mode |
+| | `com.tcl.initsetup` | First-run setup with ACR hooks |
+| | `com.tcl.interactive` | TIAS background service |
+| | `com.tcl.logkit` | Log capture & upload |
+| | `com.tcl.messagebox` | Pushed messages & promos |
+| | `com.tcl.ocean.instructions` | E-manual |
+| | `com.tcl.partnercustomizer` | Google TV home row tweaks |
+| | `com.tcl.repairguide` | Self-diagnosis tool |
+| | `com.tcl.smartalexa` | Alexa client (keep if using Alexa) |
+| | `com.tcl.smartlink.core` | Silent app installer bundle |
+| | `com.tcl.t_solo` | Bluetooth "listen alone" |
+| | `com.tcl.ttvs` | BI/awareness/identifier services |
+| | `com.tcl.tv.plus` | TCL TV+ free channels |
+| | `com.tcl.tv.tclhome_passive` | Pushes TCL content at boot |
+| | `com.tcl.useragreement` | EULA/privacy screens |
+| | `com.tcl.usercenter` | TCL account sign-in |
+| | `com.tcl.waterfall.overseas` | Content "waterfall" recommendations |
+| **Sony** | `com.sony.dtv.customersupport` | Help tile |
+| | `com.sony.dtv.da.service` | Device analytics |
+| | `com.sony.dtv.demosupport` | Demo mode support |
+| | `com.sony.dtv.demosystemsupport` | Demo system support |
+| | `com.sony.dtv.multiscreendemo` | Multi-screen demo |
+| | `com.sony.dtv.smarthelp` | Smart help overlay |
+| | `com.sony.dtv.sonybugreportsys` | Bug report system |
+| | `com.sonyericsson.idd.agent` | Legacy IDD agent |
+| | `com.qterics.da.product` | Device analytics |
+| **Philips / TP Vision** | `com.mediatek.opapp` | Euro satellite operator apps |
+| | `com.mstar.android.tv.disclaimercustomization` | Disclaimer popup |
+| **NVIDIA SHIELD** | `com.nvidia.diagtools` | Log collector (re-enable if support asks) |
+| | `com.nvidia.feedback` | Crash reports & feedback form |
+| | `com.nvidia.nvgamecast` | GameStream receiver (Moonlight/Sunshine don't need it) |
+| | `com.nvidia.stats` | Anonymous usage statistics |
+| | `com.nvidia.tegrazone3` | "NVIDIA Games" app row (GeForce NOW is separate) |
+| **Freeview / UK TV** | `uk.co.freeview.*` | Multiple Freeview catch-up & guide apps |
+| | `org.droidtv.*` | Various DroidTV demo/partner apps |
 
 ---
 
