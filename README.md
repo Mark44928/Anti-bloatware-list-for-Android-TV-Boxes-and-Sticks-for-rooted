@@ -205,8 +205,6 @@ pm uninstall --user 0 com.google.android.partnersetup; \
 pm uninstall --user 0 com.google.android.onetimeinitializer; \
 pm uninstall --user 0 com.google.android.syncadapters.calendar
 ```
-pm uninstall --user 0 com.android.dreams.basic
-```
 
 > **Pro tip:** Save this block as `debloat-safe.sh` and run it from your PC:  
 > `adb shell su -c "sh debloat-safe.sh"`
@@ -224,8 +222,6 @@ cmd package install-existing <package.name>
 Example:
 ```bash
 cmd package install-existing com.google.android.music
-```
-
 Restore the universal packages shown above (run the block that matches what you removed):
 
 ```bash
