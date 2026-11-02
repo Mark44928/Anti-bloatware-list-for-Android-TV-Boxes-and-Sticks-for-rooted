@@ -1,4 +1,4 @@
-<h1 align="center">Anti-Bloatware List for Android TV Boxes & Sticks</h1>
+<h1 align="center">Anti-Bloatware List for Android TV Boxes &amp; Sticks</h1>
 
 <p align="center">
   <a href="https://github.com/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted/stargazers"><img src="https://img.shields.io/github/stars/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted?style=social" alt="Stars"></a>
@@ -273,17 +273,17 @@ These packages are pre-installed by specific manufacturers and are generally saf
 | | `com.mitv.tvhome.oemtab` | Xiaomi ad row on home |
 | | `com.miui.tv.analytics` | Mi analytics telemetry |
 | **TCL** | `com.tcl.channelplus` | TCL Live FAST channels |
-| | `com.tcl.dashboard` | TCL Home panel & promos |
+| | `com.tcl.dashboard` | TCL Home panel &amp; promos |
 | | `com.tcl.esticker` | Store demo stickers |
 | | `com.tcl.exhibit` | Store demo mode |
 | | `com.tcl.gamebar` | Game mode overlay |
-| | `com.tcl.guard` | TGuard: tracking & memory cleaner |
+| | `com.tcl.guard` | TGuard: tracking &amp; memory cleaner |
 | | `com.tcl.hearaid` | Hearing test / volume adaptation |
 | | `com.tcl.hotelmenu` | Hotel mode |
 | | `com.tcl.initsetup` | First-run setup with ACR hooks |
 | | `com.tcl.interactive` | TIAS background service |
-| | `com.tcl.logkit` | Log capture & upload |
-| | `com.tcl.messagebox` | Pushed messages & promos |
+| | `com.tcl.logkit` | Log capture &amp; upload |
+| | `com.tcl.messagebox` | Pushed messages &amp; promos |
 | | `com.tcl.ocean.instructions` | E-manual |
 | | `com.tcl.partnercustomizer` | Google TV home row tweaks |
 | | `com.tcl.repairguide` | Self-diagnosis tool |
@@ -308,11 +308,11 @@ These packages are pre-installed by specific manufacturers and are generally saf
 | **Philips / TP Vision** | `com.mediatek.opapp` | Euro satellite operator apps |
 | | `com.mstar.android.tv.disclaimercustomization` | Disclaimer popup |
 | **NVIDIA SHIELD** | `com.nvidia.diagtools` | Log collector (re-enable if support asks) |
-| | `com.nvidia.feedback` | Crash reports & feedback form |
+| | `com.nvidia.feedback` | Crash reports &amp; feedback form |
 | | `com.nvidia.nvgamecast` | GameStream receiver (Moonlight/Sunshine don't need it) |
 | | `com.nvidia.stats` | Anonymous usage statistics |
 | | `com.nvidia.tegrazone3` | "NVIDIA Games" app row (GeForce NOW is separate) |
-| **Freeview / UK TV** | `uk.co.freeview.*` | Multiple Freeview catch-up & guide apps |
+| **Freeview / UK TV** | `uk.co.freeview.*` | Multiple Freeview catch-up &amp; guide apps |
 | | `org.droidtv.*` | Various DroidTV demo/partner apps |
 
 ---
