@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: README consistency (fences, ToC anchors, package names)
+        run: python3 tests/check_readme.py
+      - name: Shell scripts parse and cover every documented package
+        run: |
+          bash -n debloat.sh
+          bash -n debloat-safe.sh
+          bash -n restore.sh
+          python3 tests/check_scripts.py
