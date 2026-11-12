@@ -36,7 +36,7 @@ PKGS=(
 restored=0
 missing=0
 for p in "${PKGS[@]}"; do
-  if pm list packages --uninstalled | grep -qx "package:$p"; then
+  if pm list packages -u | grep -qx "package:$p"; then
     if cmd package install-existing "$p" >/dev/null 2>&1; then
       echo "restored $p"
       restored=$((restored + 1))
