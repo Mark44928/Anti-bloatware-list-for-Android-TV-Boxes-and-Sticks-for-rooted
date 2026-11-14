@@ -46,10 +46,10 @@ Android TV devices ship with dozens of pre-installed apps you'll never use. Remo
 
 ## Table of Contents
 
+- [Why Debloat?](#why-debloat)
 - [Quick Start](#quick-start)
 - [Requirements](#requirements)
 - [Before You Start](#before-you-start)
-- [Why Debloat?](#why-debloat)
 - [Safe to Remove (Universal Bloat)](#safe-to-remove-universal-bloat)
 - [Use Caution](#use-caution)
 - [No-Mic Graveyard](#no-mic-graveyard)
@@ -58,6 +58,7 @@ Android TV devices ship with dozens of pre-installed apps you'll never use. Remo
 - [How to Restore](#how-to-restore)
 - [Device Compatibility](#device-compatibility)
 - [Vendor-Specific Bloatware](#vendor-specific-bloatware-safe-to-remove)
+- [Changelog](#changelog)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -97,7 +98,28 @@ Android TV devices ship with dozens of pre-installed apps you'll never use. Remo
 - **Use `--user 0`:** `pm uninstall --user 0 <package>` is per-user and usually reversible.
 - **Restore it:** `cmd package install-existing <package>`
 - **Never use `pm uninstall` without `--user 0`** unless you have a full system backup and know exactly what you are doing.
-- **Root is recommended.** Some packages can be removed with plain ADB using `--user 0`; protected system packages may still require root.
+
+### Device report (no root)
+
+Note what you are working on before removing anything — model, Android
+version and ABI, straight from `getprop`:
+
+```bash
+bash device-info.sh
+```
+
+### Package backup (no root)
+
+Before removing anything, keep a restorable list of every installed package
+and its APK path:
+
+```bash
+bash backup-packages.sh                 # -> ~/android-packages-<timestamp>.txt
+bash backup-packages.sh ~/my-backup.txt
+```
+
+The dump pairs each package with its `pm path` APK, so you can reinstall or
+verify exactly what you removed.
 
 ---
 
@@ -398,7 +420,7 @@ done
   restore fallback
 - The restore block now covers **every** package in both debloat blocks
 - Both blocks are shipped as real scripts — [`debloat.sh`](debloat.sh),
-  [`debloat-safe.sh`](debloat-safe.sh), [`restore.sh`](restore.sh)) — with
+  [`debloat-safe.sh`](debloat-safe.sh), [`restore.sh`](restore.sh) — with
   `pm list packages` existence checks so misses are skipped, not fatal
 - Wildcard "packages" (`uk.co.freeview.*`) replaced with a working
   `pm list packages | grep` expansion snippet
@@ -438,15 +460,6 @@ Tiny, dependency-free tools from the same family:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## You Might Also Like
-
-- [NoNameOS](https://github.com/Mark44928/NoNameOS) - Pure C++ hobbyist OS simulation
-- [SnakTUI](https://github.com/Mark44928/SnakTUI) - Neon terminal Snake game built with Python + Textual
-- [Grub Blasters](https://github.com/Mark44928/GrubBlastersHTML) - Single-file Worms-style artillery game
-- [CalculaHTML](https://github.com/Mark44928/CalculaHTML) - Modern calculator PWA with 14 themes
 
 ---
 
