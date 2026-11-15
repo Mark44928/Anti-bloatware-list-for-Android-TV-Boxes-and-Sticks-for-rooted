@@ -121,6 +121,16 @@ bash backup-packages.sh ~/my-backup.txt
 The dump pairs each package with its `pm path` APK, so you can reinstall or
 verify exactly what you removed.
 
+### Compare two backups
+
+After a debloat run, diff the before/after dumps to see exactly what changed:
+
+```bash
+bash compare-packages.sh android-packages-before.txt android-packages-after.txt
+```
+
+It prints `Removed` and `Added` sections with one package name per line.
+
 ---
 
 ## Safe to Remove (Universal Bloat)
