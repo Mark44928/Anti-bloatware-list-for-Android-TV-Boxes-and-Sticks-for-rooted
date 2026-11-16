@@ -3,6 +3,22 @@
 # Never touches voice-search packages, and never touches the caution tier.
 set -u
 
+# No options exist. Fail fast on any argument — running the script with an
+# unexpected flag must never start removing packages.
+case "${1:-}" in
+  "") ;;
+  --help|-h)
+    echo "usage: debloat-safe.sh"
+    echo "  removes the universal-safe packages listed in this script"
+    echo "  there are no options and no --dry-run; review the README tables first"
+    exit 0
+    ;;
+  *)
+    echo "unknown argument: $1 (this script takes none; refusing to run)" >&2
+    exit 2
+    ;;
+esac
+
 PKGS=(
   com.google.android.videos
   com.google.android.music
@@ -28,7 +44,7 @@ PKGS=(
 removed=0
 skipped=0
 for p in "${PKGS[@]}"; do
-  if pm list packages | grep -qx "package:$p"; then
+  if pm list packages | grep -Fqx "package:$p"; then
     if pm uninstall --user 0 "$p" >/dev/null 2>&1; then
       echo "removed  $p"
       removed=$((removed + 1))

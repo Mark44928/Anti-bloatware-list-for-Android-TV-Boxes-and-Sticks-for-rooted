@@ -6,6 +6,21 @@
 # restored this way — the script reports them so you know to sideload the APK.
 set -u
 
+DRY=0
+case "${1:-}" in
+  --dry-run|-n) DRY=1 ;;
+  --help|-h)
+    echo "usage: restore.sh [--dry-run]"
+    echo "  --dry-run, -n   show what would be restored without changing anything"
+    exit 0
+    ;;
+  "") ;;
+  *)
+    echo "unknown option: $1 (try --help)" >&2
+    exit 2
+    ;;
+esac
+
 PKGS=(
   com.google.android.katniss
   com.google.android.apps.googleassistant
@@ -34,10 +49,14 @@ PKGS=(
 )
 
 restored=0
+planned=0
 missing=0
 for p in "${PKGS[@]}"; do
-  if pm list packages -u | grep -qx "package:$p"; then
-    if cmd package install-existing "$p" >/dev/null 2>&1; then
+  if pm list packages -u | grep -Fqx "package:$p"; then
+    if [ "$DRY" = "1" ]; then
+      echo "would restore $p"
+      planned=$((planned + 1))
+    elif cmd package install-existing "$p" >/dev/null 2>&1; then
       echo "restored $p"
       restored=$((restored + 1))
     else
@@ -49,4 +68,8 @@ for p in "${PKGS[@]}"; do
   fi
 done
 echo
-echo "done: $restored restored, $missing absent. Reboot to settle."
+if [ "$DRY" = "1" ]; then
+  echo "dry run: $planned would be restored, $missing absent. Nothing changed."
+else
+  echo "done: $restored restored, $missing absent. Reboot to settle."
+fi
