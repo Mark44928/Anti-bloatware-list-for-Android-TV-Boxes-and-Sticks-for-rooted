@@ -54,6 +54,7 @@ Android TV devices ship with dozens of pre-installed apps you'll never use. Remo
 - [Use Caution](#use-caution)
 - [No-Mic Graveyard](#no-mic-graveyard)
 - [DO NOT TOUCH](#do-not-touch)
+- [Audit Before You Debloat](#audit-before-you-debloat)
 - [Debloat Commands](#debloat-commands)
 - [How to Restore](#how-to-restore)
 - [Device Compatibility](#device-compatibility)
@@ -192,6 +193,19 @@ Deleting these will **break your system** or cause a bootloop:
 | `com.google.android.gms` | Google Play Services -- required by almost everything |
 | `com.android.vending` | Google Play Store |
 | `com.google.android.packageinstaller` | System app installer |
+
+---
+
+## Audit Before You Debloat
+
+`audit.sh` is a read-only report: it reads the package lists in both debloat
+scripts, then classifies every target as **enabled**, **disabled** or **absent**
+on the connected device. It never removes or disables anything.
+
+```bash
+bash audit.sh
+bash audit.sh --json    # machine-readable report
+```
 
 ---
 
@@ -471,7 +485,7 @@ Tiny, dependency-free tools from the same family:
 - [Plusalator](https://github.com/Mark44928/Plusalator) — C++17 calculator REPL — Qalculate-flavored, ghost autosuggest, 18 themes
 - [GrubBlastersHTML](https://github.com/Mark44928/GrubBlastersHTML) — Turn-based artillery in one HTML file — 72 weapons, fully destructible terrain
 - [SnakTUI](https://github.com/Mark44928/SnakTUI) — modern Snake for your terminal — Textual + Python
-- [Easy-Termux-Package-Manager](https://github.com/Mark44928/Easy-Termux-Package-Manager) — fzf-driven package manager for Termux — snapshots, audit, 186 tests
+- [Easy-Termux-Package-Manager](https://github.com/Mark44928/Easy-Termux-Package-Manager) — fzf-driven package manager for Termux — snapshots, audit, 187 tests
 - [NoNameOS](https://github.com/Mark44928/NoNameOS) — OS simulation in a single C++17 file — virtual FS, real shell
 - [Greenit](https://github.com/Mark44928/Greenit) — green-injected theme family — dark + light, single palette.json
 - [CalculaHTML](https://github.com/Mark44928/CalculaHTML) — static HTML calculator — 15 themes + System mode, zero deps
