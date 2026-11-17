@@ -216,6 +216,16 @@ bash report.sh --output /path/to/report.html
 
 The report embeds only package names and states, contains no telemetry, and includes a small inline filter.
 
+To generate a device-specific pair of shell scripts, use the tiered profile generator:
+
+```bash
+bash profile.sh --dry-run                         # safe tier, print selected targets
+bash profile.sh --tier safe --output ./out       # writes out/script-debloat-safe.sh + out/script-restore-safe.sh
+bash profile.sh --tier full --output ./out       # same, but with the full debloat list
+```
+
+`--dry-run` never writes files. The generated scripts preserve the category rule of the tier you chose and only include targets that are currently installed or enabled on the device.
+
 ---
 
 ## Debloat Commands
@@ -497,7 +507,7 @@ Tiny, dependency-free tools from the same family:
 - [Plusalator](https://github.com/Mark44928/Plusalator) — C++17 calculator REPL — Qalculate-flavored, ghost autosuggest, 18 themes
 - [GrubBlastersHTML](https://github.com/Mark44928/GrubBlastersHTML) — Turn-based artillery in one HTML file — 72 weapons, fully destructible terrain
 - [SnakTUI](https://github.com/Mark44928/SnakTUI) — Snake game for the terminal — Textual + Python
-- [Easy-Termux-Package-Manager](https://github.com/Mark44928/Easy-Termux-Package-Manager) — fzf-driven package manager for Termux — snapshots, audit, 190 tests
+- [Easy-Termux-Package-Manager](https://github.com/Mark44928/Easy-Termux-Package-Manager) — fzf-driven package manager for Termux — snapshots, audit, 192 tests
 - [NoNameOS](https://github.com/Mark44928/NoNameOS) — OS simulation in a single C++17 file — virtual FS, real shell
 - [Greenit](https://github.com/Mark44928/Greenit) — green-injected theme family — dark + light, single palette.json
 - [CalculaHTML](https://github.com/Mark44928/CalculaHTML) — static HTML calculator — 15 themes + System mode, zero deps

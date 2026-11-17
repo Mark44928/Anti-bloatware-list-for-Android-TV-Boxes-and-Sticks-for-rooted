@@ -21,4 +21,5 @@ jobs:
           bash -n restore.sh
           bash -n audit.sh
           bash -n report.sh
+          bash -n profile.sh
           python3 tests/check_scripts.py
