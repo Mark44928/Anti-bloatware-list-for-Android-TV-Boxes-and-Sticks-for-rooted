@@ -19,4 +19,6 @@ jobs:
           bash -n debloat.sh
           bash -n debloat-safe.sh
           bash -n restore.sh
+          bash -n audit.sh
+          bash -n report.sh
           python3 tests/check_scripts.py

@@ -207,6 +207,15 @@ bash audit.sh
 bash audit.sh --json    # machine-readable report
 ```
 
+For a local, searchable single-file view of the same device audit, generate a static HTML report:
+
+```bash
+bash report.sh                          # writes audit-report.html
+bash report.sh --output /path/to/report.html
+```
+
+The report embeds only package names and states, contains no telemetry, and includes a small inline filter.
+
 ---
 
 ## Debloat Commands
