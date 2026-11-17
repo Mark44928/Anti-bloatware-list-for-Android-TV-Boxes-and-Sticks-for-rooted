@@ -19,8 +19,15 @@ pkglist() {
     awk -F= '/^package:/{print $NF}' "$1" | sed 's/[[:space:]]*$//' | sort -u
 }
 
-tmp_before=$(mktemp "${TMPDIR:-.}/pkgs-before.XXXXXX")
-tmp_after=$(mktemp "${TMPDIR:-.}/pkgs-after.XXXXXX")
+if [ -n "${TMPDIR:-}" ] && [ -d "$TMPDIR" ] && [ -w "$TMPDIR" ]; then
+    :
+elif [ -d /data/data/com.termux/files/usr/tmp ] && [ -w /data/data/com.termux/files/usr/tmp ]; then
+    TMPDIR=/data/data/com.termux/files/usr/tmp
+else
+    TMPDIR=$(mktemp -d)
+fi
+tmp_before=$(mktemp "${TMPDIR}/pkgs-before.XXXXXX")
+tmp_after=$(mktemp "${TMPDIR}/pkgs-after.XXXXXX")
 trap 'rm -f "$tmp_before" "$tmp_after"' EXIT
 
 pkglist "$before" > "$tmp_before"
