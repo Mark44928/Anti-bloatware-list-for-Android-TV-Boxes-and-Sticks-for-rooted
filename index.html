@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anti-bloatware — Android TV cleanup</title>
+<style>
+:root{color-scheme:dark;--bg:#08130d;--p:#0e1c14;--b:#2b4936;--t:#e7f4eb;--m:#9fbea9;--a:#7bd88f;--a2:#ffd166}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(80% 55% at 50% 0,#153d27,var(--bg));color:var(--t);font:16px/1.55 ui-sans-serif,system-ui,sans-serif}
+main{max-width:800px;margin:auto;padding:42px 20px 64px}a{color:var(--a2)}.back{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--m)}
+.k{color:var(--a);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;margin:28px 0 8px}h1{font-size:clamp(2.8rem,10vw,5.8rem);line-height:.9;letter-spacing:-.06em;margin:0}
+.lede{font-size:1.16rem;color:var(--m);max-width:60ch}.buttons{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}.btn{padding:9px 14px;border:1px solid var(--b);border-radius:9px;background:var(--p);color:var(--t);text-decoration:none}.btn.primary{border-color:var(--a);color:var(--a)}
+pre{background:var(--p);border:1px solid var(--b);border-radius:10px;padding:13px;overflow:auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;padding:0;list-style:none}.grid li{background:var(--p);border:1px solid var(--b);border-radius:10px;padding:12px;color:var(--m)}.grid b{display:block;color:var(--a2)}footer{margin-top:32px;border-top:1px solid var(--b);padding-top:14px;color:var(--m);font-size:.78rem}
+</style>
+<main>
+<a class="back" href="https://github.com/Mark44928">← Mark44928 / projects</a>
+<p class="k">Android TV · read-only audits</p>
+<h1>Anti-bloatware</h1>
+<p class="lede">A curated Android TV debloat list with read-only audits, device-specific generated scripts and matching restore tools. Nothing runs until you review it.</p>
+<div class="buttons"><a class="btn primary" href="https://github.com/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted">Source &amp; guide</a><a class="btn" href="https://github.com/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted#audit-before-you-debloat">Audit first</a><a class="btn" href="https://mark44928.github.io/Mark44928/">Project hub</a></div>
+<pre>git clone https://github.com/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted.git
+cd Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted
+bash audit.sh</pre>
+<ul class="grid"><li><b>No guessing</b>enabled, disabled and absent targets</li><li><b>Device profiles</b>generated debloat + restore scripts</li><li><b>HTML report</b>offline searchable package view</li><li><b>Review first</b>root scripts never self-run</li></ul>
+<footer>For rooted devices. Read the README before removing anything.</footer>
+</main>
+</html>
