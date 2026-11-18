@@ -13,6 +13,7 @@ usage() {
 
 TIER=safe
 OUTPUT=.
+START_DIR="$(pwd)"
 DRY_RUN=0
 case "${1:-}" in
   --help|-h) usage; exit 0 ;;
@@ -33,6 +34,10 @@ case "$TIER" in safe|full) ;; *) echo "profile.sh: --tier must be safe or full" 
 
 HERE="$(cd "$(dirname "$0")" && pwd)"
 cd "$HERE"
+case "$OUTPUT" in
+  /*) ;;
+  *) OUTPUT="$START_DIR/$OUTPUT" ;;
+esac
 command -v pm >/dev/null 2>&1 || { echo "pm is required (run on an Android device)" >&2; exit 1; }
 
 mapfile -t SAFE < <(awk '/^PKGS=\(/,/^\)/ { if ($1 ~ /^com\./) print $1 }' debloat-safe.sh)

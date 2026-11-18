@@ -24,6 +24,17 @@ pm() {
 export -f pm
 
 bash "$ROOT/report.sh" --output "$tmp/report.html" >/dev/null
+audit_json=$(bash "$ROOT/audit.sh" --json)
+printf '%s\n' "$audit_json" | grep -Fq '"total":23'
+if printf '%s\n' "$audit_json" | grep -Eq '"package":"(else|fi)"'; then
+  echo "audit picked up shell keywords" >&2
+  exit 1
+fi
+(
+  cd "$tmp"
+  bash "$ROOT/report.sh" --output relative.html >/dev/null
+  test -s relative.html
+)
 
 fail=0
 check() { if grep -q "$1" "$tmp/report.html"; then echo "ok: $2"; else echo "MISSING: $2 ($1)"; fail=1; fi; }

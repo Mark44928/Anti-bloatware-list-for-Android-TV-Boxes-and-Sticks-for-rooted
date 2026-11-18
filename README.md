@@ -1,5 +1,7 @@
 <h1 align="center">Anti-Bloatware List for Android TV Boxes &amp; Sticks</h1>
 
+<p align="center"><img src="assets/logo.svg" width="760" alt="Anti-Bloatware logo"></p>
+
 <p align="center">
   <a href="https://github.com/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted/stargazers"><img src="https://img.shields.io/github/stars/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted?style=social" alt="Stars"></a>
   <a href="https://github.com/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted/network/members"><img src="https://img.shields.io/github/forks/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted?style=social" alt="Forks"></a>

@@ -17,7 +17,7 @@ HERE="$(cd "$(dirname "$0")" && pwd)"
 cd "$HERE" || exit 1
 command -v pm >/dev/null 2>&1 || { echo "pm is required (run on an Android device)" >&2; exit 1; }
 
-mapfile -t PKGS < <(grep -hE '^  [A-Za-z0-9_.]+$' debloat.sh debloat-safe.sh | sed 's/^  //' | sort -u)
+mapfile -t PKGS < <(grep -hE '^  com\.[A-Za-z0-9_.]+$' debloat.sh debloat-safe.sh | sed 's/^  //' | sort -u)
 if ! INSTALLED_RAW=$(pm list packages -u 2>/dev/null); then
   echo "pm could not list packages; refusing to guess" >&2
   exit 1

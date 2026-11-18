@@ -2,6 +2,7 @@
 # report.sh — build a static, read-only HTML report from the device audit.
 set -euo pipefail
 
+CALLER_DIR="$(pwd)"
 HERE="$(cd "$(dirname "$0")" && pwd)"
 cd "$HERE"
 output="audit-report.html"
@@ -22,6 +23,11 @@ case "${1:-}" in
     ;;
   "") ;;
   *) echo "unknown option: $1 (try --help)" >&2; exit 2 ;;
+esac
+
+case "$output" in
+  /*) ;;
+  *) output="$CALLER_DIR/$output" ;;
 esac
 
 command -v pm >/dev/null 2>&1 || { echo "pm is required (run on an Android device)" >&2; exit 1; }
@@ -55,7 +61,7 @@ rows=$(
 declare -A in_safe=()
 while IFS= read -r p; do
   [ -n "$p" ] && in_safe[$p]=1
-done < <(grep -hE '^  [A-Za-z0-9_.]+$' debloat-safe.sh | sed 's/^  //' | sort -u)
+done < <(grep -hE '^  com\.[A-Za-z0-9_.]+$' debloat-safe.sh | sed 's/^  //' | sort -u)
 
 s_tot=0; s_ena=0; s_dis=0; s_abs=0
 n_tot=0; n_ena=0; n_dis=0; n_abs=0
