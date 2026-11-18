@@ -214,7 +214,7 @@ bash report.sh                          # writes audit-report.html
 bash report.sh --output /path/to/report.html
 ```
 
-The report embeds only package names and states, contains no telemetry, and includes a small inline filter.
+The report embeds only package names and states, contains no telemetry or external assets, and includes a small inline filter. It shows count cards, visual count bars for the status and tier totals, a clearly labelled risk legend (Safe universal / No-mic graveyard / Use Caution / DO NOT TOUCH), native `<details>` sections, and a black-on-white `@media print` stylesheet for clean printing.
 
 To generate a device-specific pair of shell scripts, use the tiered profile generator:
 
@@ -484,6 +484,9 @@ done
   scripts and README cannot drift apart. The three scripts (`debloat.sh`,
   `debloat-safe.sh`, `restore.sh`) are `bash -n`-parsed and cross-checked
   against the README tables.
+- `tests/check_report.sh` smoke-tests the generated HTML report (fixture `pm`
+  stub, not a real device): it asserts the report title, count bars, risk
+  legend and `<details>` sections are present.
 
 ## Contributing
 
@@ -507,7 +510,7 @@ Tiny, dependency-free tools from the same family:
 - [Plusalator](https://github.com/Mark44928/Plusalator) — C++17 calculator REPL — Qalculate-flavored, ghost autosuggest, 18 themes
 - [GrubBlastersHTML](https://github.com/Mark44928/GrubBlastersHTML) — Turn-based artillery in one HTML file — 72 weapons, fully destructible terrain
 - [SnakTUI](https://github.com/Mark44928/SnakTUI) — Snake game for the terminal — Textual + Python
-- [Easy-Termux-Package-Manager](https://github.com/Mark44928/Easy-Termux-Package-Manager) — fzf-driven package manager for Termux — snapshots, audit, 193 tests
+- [Easy-Termux-Package-Manager](https://github.com/Mark44928/Easy-Termux-Package-Manager) — fzf-driven package manager for Termux — snapshots, audit, 194 tests
 - [NoNameOS](https://github.com/Mark44928/NoNameOS) — OS simulation in a single C++17 file — virtual FS, real shell
 - [Greenit](https://github.com/Mark44928/Greenit) — green-injected theme family — dark + light, single palette.json
 - [CalculaHTML](https://github.com/Mark44928/CalculaHTML) — static HTML calculator — 15 themes + System mode, zero deps

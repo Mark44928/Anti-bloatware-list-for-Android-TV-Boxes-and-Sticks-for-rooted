@@ -22,4 +22,7 @@ jobs:
           bash -n audit.sh
           bash -n report.sh
           bash -n profile.sh
+          bash -n tests/check_report.sh
           python3 tests/check_scripts.py
+      - name: Report smoke test (fixture pm stub)
+        run: bash tests/check_report.sh
