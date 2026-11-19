@@ -3,9 +3,9 @@
 <p align="center"><img src="assets/logo.svg" width="760" alt="Anti-Bloatware logo"></p>
 
 <p align="center">
-  <a href="https://github.com/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted/stargazers"><img src="https://img.shields.io/github/stars/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted?style=social" alt="Stars"></a>
-  <a href="https://github.com/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted/network/members"><img src="https://img.shields.io/github/forks/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted?style=social" alt="Forks"></a>
-  <a href="https://github.com/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted?color=blue" alt="License"/></a>
+  <a href="https://github.com/Mark44928/debloat-android-tv/stargazers"><img src="https://img.shields.io/github/stars/Mark44928/debloat-android-tv?style=social" alt="Stars"></a>
+  <a href="https://github.com/Mark44928/debloat-android-tv/network/members"><img src="https://img.shields.io/github/forks/Mark44928/debloat-android-tv?style=social" alt="Forks"></a>
+  <a href="https://github.com/Mark44928/debloat-android-tv/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Mark44928/debloat-android-tv?color=blue" alt="License"/></a>
   <img src="https://img.shields.io/badge/requires-root-red" alt="Root Required"/>
   <img src="https://img.shields.io/badge/Android-9%20%7C%2010%2B-green" alt="Android Version"/>
   <img src="https://img.shields.io/badge/list%20version-v2.0.0-blue" alt="List Version"/>
@@ -392,7 +392,7 @@ This list has been tested on common Android TV sticks and boxes running Android 
 | Chromecast with Google TV | 10.0+ | Limited -- some packages are protected |
 | Onn. Android TV Box | 10.0 | Fully compatible |
 
-> Have a device not listed? [Open an issue](https://github.com/Mark44928/Anti-bloatware-list-for-Android-TV-Boxes-and-Sticks-for-rooted/issues) and let us know!
+> Have a device not listed? [Open an issue](https://github.com/Mark44928/debloat-android-tv/issues) and let us know!
 
 ---
 
