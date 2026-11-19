@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="t d">
-  <title id="t">Anti-Bloatware</title>
-  <desc id="d">Anti-Bloatware logo: a red shield with a debloat slash on a dark panel.</desc>
+  <title id="t">debloat-android-tv</title>
+  <desc id="d">debloat-android-tv logo: a guarded Android TV shield with a debloat slash on a dark panel.</desc>
   <rect width="1200" height="300" rx="28" fill="#160B10"/>
   <rect x="1" y="1" width="1198" height="298" rx="27" fill="none" stroke="#5E2937" stroke-width="2"/>
   <circle cx="150" cy="150" r="96" fill="#251018" stroke="#4C2230" stroke-width="2"/>
@@ -8,7 +8,7 @@
   <rect x="127" y="125" width="46" height="56" rx="6" fill="none" stroke="#FFD166" stroke-width="4"/>
   <path d="M120 117h60M140 110h20M150 137v33M136 147h28" stroke="#FFD166" stroke-width="4" stroke-linecap="round"/>
   <path d="M104 209 L203 109" stroke="#FF5B7F" stroke-width="8" stroke-linecap="round"/>
-  <text x="306" y="154" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="76" font-weight="800" letter-spacing="2" fill="#FFEFF3">ANTI-BLOATWARE</text>
-  <text x="310" y="203" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="18" letter-spacing="4" fill="#BE8592">DEBLOAT · ANDROID TV</text>
+  <text x="330" y="158" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="96" font-weight="800" letter-spacing="8" fill="#FFEFF3">DEBLOAT</text>
+  <text x="334" y="204" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="18" letter-spacing="5" fill="#BE8592">ANDROID TV · AUDIT + RESTORE</text>
   <text x="1138" y="252" text-anchor="end" font-family="ui-monospace,monospace" font-size="14" letter-spacing="3" fill="#734552">MARK44928</text>
 </svg>

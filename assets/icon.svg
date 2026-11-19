@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="t d">
+  <title id="t">debloat-android-tv</title>
+  <desc id="d">debloat-android-tv app icon: a guarded Android TV shield with a debloat slash.</desc>
+  <rect width="512" height="512" rx="104" fill="#160B10"/>
+  <circle cx="256" cy="256" r="190" fill="#251018" stroke="#4C2230" stroke-width="4"/>
+  <path d="M256 90l128 48v90c0 82-52 132-128 168-76-36-128-86-128-168v-90z" fill="#3A1520" stroke="#FF5B7F" stroke-width="10"/>
+  <rect x="212" y="196" width="88" height="108" rx="12" fill="none" stroke="#FFD166" stroke-width="8"/>
+  <path d="M200 180h112M238 166h36M256 218v64M230 238h52" stroke="#FFD166" stroke-width="8" stroke-linecap="round"/>
+  <path d="M168 356 L344 166" stroke="#FF5B7F" stroke-width="16" stroke-linecap="round"/>
+</svg>

@@ -1,6 +1,6 @@
 <h1 align="center">Anti-Bloatware List for Android TV Boxes &amp; Sticks</h1>
 
-<p align="center"><img src="assets/logo.svg" width="760" alt="Anti-Bloatware logo"></p>
+<p align="center"><img src="assets/logo.svg?v=2" width="760" alt="debloat-android-tv logo"></p>
 
 <p align="center">
   <a href="https://github.com/Mark44928/debloat-android-tv/stargazers"><img src="https://img.shields.io/github/stars/Mark44928/debloat-android-tv?style=social" alt="Stars"></a>
@@ -512,7 +512,7 @@ Tiny, dependency-free tools from the same family:
 - [Mark44928](https://github.com/Mark44928) — profile and project index
 - [plusafetch](https://github.com/Mark44928/plusafetch) — C++23 fetch for Termux — ~23 ms, zero subprocesses on the default path
 - [Plusalator](https://github.com/Mark44928/Plusalator) — C++17 calculator REPL — Qalculate-flavored, ghost autosuggest, 19 themes
-- [GrubBlastersHTML](https://github.com/Mark44928/GrubBlastersHTML) — Turn-based artillery in one HTML file — 72 weapons, fully destructible terrain
+- [GrubBlastersHTML](https://github.com/Mark44928/GrubBlastersHTML) — Turn-based artillery in one HTML file — 73 weapons, fully destructible terrain
 - [SnakTUI](https://github.com/Mark44928/SnakTUI) — Snake game for the terminal — Textual + Python
 - [Easy-Termux-Package-Manager](https://github.com/Mark44928/Easy-Termux-Package-Manager) — fzf-driven package manager for Termux — snapshots, audit, 194 tests
 - [NoNameOS](https://github.com/Mark44928/NoNameOS) — OS simulation in a single C++17 file — virtual FS, real shell
