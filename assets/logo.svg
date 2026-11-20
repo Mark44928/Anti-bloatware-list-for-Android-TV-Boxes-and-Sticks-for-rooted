@@ -1,14 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="t d">
   <title id="t">debloat-android-tv</title>
-  <desc id="d">debloat-android-tv logo: a guarded Android TV shield with a debloat slash on a dark panel.</desc>
-  <rect width="1200" height="300" rx="28" fill="#160B10"/>
-  <rect x="1" y="1" width="1198" height="298" rx="27" fill="none" stroke="#5E2937" stroke-width="2"/>
-  <circle cx="150" cy="150" r="96" fill="#251018" stroke="#4C2230" stroke-width="2"/>
-  <path d="M150 70l67 25v47c0 43-27 69-67 88-40-19-67-45-67-88V95z" fill="#3A1520" stroke="#FF5B7F" stroke-width="5"/>
-  <rect x="127" y="125" width="46" height="56" rx="6" fill="none" stroke="#FFD166" stroke-width="4"/>
-  <path d="M120 117h60M140 110h20M150 137v33M136 147h28" stroke="#FFD166" stroke-width="4" stroke-linecap="round"/>
-  <path d="M104 209 L203 109" stroke="#FF5B7F" stroke-width="8" stroke-linecap="round"/>
-  <text x="330" y="158" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="96" font-weight="800" letter-spacing="8" fill="#FFEFF3">DEBLOAT</text>
-  <text x="334" y="204" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="18" letter-spacing="5" fill="#BE8592">ANDROID TV · AUDIT + RESTORE</text>
-  <text x="1138" y="252" text-anchor="end" font-family="ui-monospace,monospace" font-size="14" letter-spacing="3" fill="#734552">MARK44928</text>
+  <desc id="d">Minimal debloat-android-tv logo: a red shield with a slash and a dark wordmark.</desc>
+  <rect width="1200" height="300" rx="28" fill="#0B0D12"/>
+  <g fill="none" stroke="#FF6B6B" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 84 L206 106 V152 C206 182 182 204 150 216 C118 204 94 182 94 152 V106 Z"/>
+    <path d="M122 178 L178 122"/>
+  </g>
+  <text x="300" y="180" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif" font-size="58" font-weight="650" letter-spacing="-2" fill="#F5F7FA">debloat-android-tv</text>
 </svg>
