@@ -10,7 +10,7 @@ trap 'rm -rf "$tmp"' EXIT
 
 mkdir -p "$tmp/bin"
 cat >"$tmp/bin/pm" <<'EOF'
-#!/data/data/com.termux/files/usr/bin/env bash
+#!/usr/bin/env bash
 if [ "${1:-}" = "list" ] && [ "${2:-}" = "packages" ]; then
     printf 'package:com.google.android.videos\n'
     exit 0
