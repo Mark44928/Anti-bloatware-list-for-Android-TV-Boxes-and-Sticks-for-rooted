@@ -333,9 +333,11 @@ bash restore.sh --dry-run
 ```
 
 Then run `bash restore.sh` to restore every package from both blocks. Add
-`--dry-run`/`-n` to any restore.sh run when you want the plan only. (The
-debloat scripts take no options — any argument, including `--dry-run`, is a
-usage error there, never an implicit debloat.)
+`--dry-run`/`-n` to any restore.sh run when you want the plan only. The
+debloat scripts now take the same flag: `bash debloat-safe.sh --dry-run` (or
+`bash debloat.sh --dry-run`) prints every target and whether it is installed,
+then changes nothing. Any other argument is still a usage error, never an
+implicit debloat.
 
 Example:
 

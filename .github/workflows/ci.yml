@@ -26,3 +26,5 @@ jobs:
           python3 tests/check_scripts.py
       - name: Report smoke test (fixture pm stub)
         run: bash tests/check_report.sh
+      - name: Debloat dry-run smoke test (fixture pm stub)
+        run: bash tests/check_debloat_dryrun.sh
