@@ -20,6 +20,10 @@
 
 > **What is this?** A curated, community-tested list of pre-installed bloatware on Android TV sticks and boxes that you can **safely remove** to free up storage, reduce background processes, reclaim RAM, and improve overall device performance. Includes two ready-to-run command blocks: one for remotes with microphones and one for no-mic setups.
 
+<p align="center"><img src="docs/screenshot-audit.png" width="720" alt="debloat-android-tv audit output"></p>
+
+<p align="center"><img src="docs/screenshot-profile.png" width="720" alt="Profile dry run"></p>
+
 > **Read this first:** `pm uninstall --user 0 <package>` removes the app for the current user only. It is usually reversible with `cmd package install-existing <package>`, but it can still break features you rely on. Back up your device, remove one package at a time when testing, and never touch the [DO NOT TOUCH](#do-not-touch) list.
 
 ---
