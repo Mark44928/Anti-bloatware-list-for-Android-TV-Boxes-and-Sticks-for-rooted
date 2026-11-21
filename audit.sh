@@ -18,11 +18,11 @@ cd "$HERE" || exit 1
 command -v pm >/dev/null 2>&1 || { echo "pm is required (run on an Android device)" >&2; exit 1; }
 
 mapfile -t PKGS < <(grep -hE '^  com\.[A-Za-z0-9_.]+$' debloat.sh debloat-safe.sh | sed 's/^  //' | sort -u)
-if ! INSTALLED_RAW=$(pm list packages -u 2>/dev/null); then
+if ! INSTALLED_RAW=$(pm list packages 2>/dev/null); then
   echo "pm could not list packages; refusing to guess" >&2
   exit 1
 fi
-if ! ENABLED_RAW=$(pm list packages 2>/dev/null); then
+if ! ENABLED_RAW=$(pm list packages -e 2>/dev/null); then
   echo "pm could not list enabled packages; refusing to guess" >&2
   exit 1
 fi
@@ -36,7 +36,6 @@ records=()
 for p in "${PKGS[@]}"; do
   state="absent"
   if printf '%s\n' "${INSTALLED[@]}" | grep -Fxq "$p"; then
-    state="installed"
     installed=$((installed + 1))
     if printf '%s\n' "${ENABLED[@]}" | grep -Fxq "$p"; then
       state="enabled"
@@ -73,6 +72,5 @@ for record in "${records[@]}"; do
     enabled)   printf '  enabled   %s\n' "$pkg" ;;
     disabled)  printf '  disabled  %s\n' "$pkg" ;;
     absent)    printf '  absent    %s\n' "$pkg" ;;
-    installed) printf '  installed %s\n' "$pkg" ;;
   esac
 done
